@@ -22,7 +22,7 @@ function addToList() {
     let timeStamp = document.createElement('span');
     let today = new Date();
     let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    let time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    let time = today.getHours() + ':' + ((today.getMinutes() < 10 ? '0' : '') + today.getMinutes()) + ':' + ((today.getSeconds() < 10 ? '0' : '') + today.getSeconds());
     let dateNtime = date+' '+time;
     timeStamp.className = 'todoCreatedAt';
     timeStamp.innerHTML = dateNtime;
