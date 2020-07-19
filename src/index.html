@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List Task</title>
+    <link rel='stylesheet' href='./style.css'>
 </head>
 <body>
     <h1>My Todo List</h1>
 
     <div id = 'divLine'>
       <label for="item">What do I want to do?</label><br>
-      <input type="text" name="item" id="textInput">
-      <select id='typeSelector'></select>
+      <input type="text" name="item" id="textInput" placeholder='Enter your task'>
+      <!-- <select id='typeSelector'>
+          <option value="" disabled selected hidden>Task Type</option>
+          <option id='toDo' value='toDo'>To Do</option>
+          <option id='toBuy' value='toBuy'>To Buy</option>
+      </select> -->
       <select id='prioritySelector'>
-          <option id='prio1'>1</option>
-          <option id='prio2'>2</option>
-          <option id='prio3'>3</option>
-          <option id='prio4'>4</option>
-          <option id='prio5'>5</option>
+          <option value="" disabled selected hidden >Priority</option>
+          <option id='prio1' value='1'>1</option>
+          <option id='prio2' value='2'>2</option>
+          <option id='prio3' value='3'>3</option>
+          <option id='prio4' value='4'>4</option>
+          <option id='prio5' value='5'>5</option>
       </select>
       <button id='addButton'>Add</button>
     </div>
@@ -25,5 +31,6 @@
     <ul id = list>
 
     </ul>
+    <script src = './main.js'></script>
 </body>
 </html>
