@@ -1,9 +1,16 @@
+
 const itemList = document.getElementById('list');
 const textInput = document.getElementById('textInput');
 const addButton = document.getElementById('addButton');
 const todoList = document.getElementById('todoList');
 const prioritySelector = document.getElementById('prioritySelector');
+const divLine = document.getElementById('divLine');
+const taskCounter = document.createElement('span');
+const tasksWord = document.createElement('span');
+taskCounter.id = 'counter';
+
 textInput.focus();
+
 //what happens when the add button is clicked:
 addButton.addEventListener('click', addToList);
 function addToList() {
@@ -41,5 +48,12 @@ function addToList() {
 
 
     textInput.value = '';
+    textInput.focus();
 
+// task counter
+let counter = todoList.getElementsByTagName('div').length;
+divLine.appendChild(taskCounter);
+divLine.appendChild(tasksWord);
+taskCounter.innerHTML = counter;
+tasksWord.innerHTML = ' Tasks'
 }
