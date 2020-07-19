@@ -4,6 +4,7 @@ const textInput = document.getElementById('textInput');
 const addButton = document.getElementById('addButton');
 const todoList = document.getElementById('todoList');
 const prioritySelector = document.getElementById('prioritySelector');
+const typeSelector = document.getElementById('typeSelector');
 const divLine = document.getElementById('divLine');
 const taskCounter = document.createElement('span');
 const tasksWord = document.createElement('span');
@@ -25,6 +26,12 @@ function addToList() {
     taskPriority.innerHTML = prioritySelector.value;
     taskContainer.appendChild(taskPriority);
     
+    // task type
+    let taskType = document.createElement('span');
+    taskType.className = 'todoType';
+    taskType.innerHTML = typeSelector.value;
+    taskContainer.appendChild(taskType);
+
     // task time stamp
     let timeStamp = document.createElement('span');
     let today = new Date();
@@ -34,8 +41,6 @@ function addToList() {
     timeStamp.className = 'todoCreatedAt';
     timeStamp.innerHTML = dateNtime;
     taskContainer.appendChild(timeStamp);
-
-    // task type...
 
     // task name
     let task = textInput.value;
@@ -55,5 +60,5 @@ let counter = todoList.getElementsByTagName('div').length;
 divLine.appendChild(taskCounter);
 divLine.appendChild(tasksWord);
 taskCounter.innerHTML = counter;
-tasksWord.innerHTML = ' Tasks'
+tasksWord.innerHTML = ' Tasks';
 }
