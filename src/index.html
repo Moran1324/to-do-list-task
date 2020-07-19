@@ -11,14 +11,14 @@
 
     <div id = 'divLine'>
       <label for="item">What do I want to do?</label><br>
-      <input type="text" name="item" id="textInput" placeholder='Enter your task'>
+      <input type="text" name="text" id="textInput" placeholder='Enter your task'>
       <!-- <select id='typeSelector'>
           <option value="" disabled selected hidden>Task Type</option>
           <option id='toDo' value='toDo'>To Do</option>
           <option id='toBuy' value='toBuy'>To Buy</option>
       </select> -->
       <select id='prioritySelector'>
-          <option value="" disabled selected hidden >Priority</option>
+          <!-- <option value="" disabled selected hidden >Priority</option> -->
           <option id='prio1' value='1'>1</option>
           <option id='prio2' value='2'>2</option>
           <option id='prio3' value='3'>3</option>
@@ -27,10 +27,8 @@
       </select>
       <button id='addButton'>Add</button>
     </div>
+    <div id='todoList'></div>
 
-    <ul id = list>
-
-    </ul>
     <script src = './main.js'></script>
 </body>
 </html>
