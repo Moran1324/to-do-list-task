@@ -17,10 +17,13 @@ textInput.focus();
 addButton.addEventListener('click', addToList);
 function addToList() {
     // task container
-    let taskContainer = document.createElement('li');
-    taskContainer.className = prioritySelector.value + ' todoContainer';
+    let taskContainer = document.createElement('div');
+    // taskContainer.className = prioritySelector.value + ' todoContainer';
+    let prioFunc;
+    taskContainer.className = 'prio' + prioritySelector.value + ' todoContainer';
     taskContainer.value = prioritySelector.value;
     todoList.appendChild(taskContainer);
+
 
 
 
@@ -70,7 +73,7 @@ function addToList() {
 
     // delete checked
     deleteChecked.id = 'deleteButton';
-    deleteChecked.innerHTML = 'Clear Checked';
+    deleteChecked.innerHTML = 'Clear Done';
     divLine.appendChild(deleteChecked);
     deleteChecked.addEventListener('click', clearChecked);
     function clearChecked(className){
@@ -87,7 +90,10 @@ function addToList() {
     // sortByPriority.id = 'sortButton';
     // sortByPriority.innerHTML = 'Sort';
     // sortButton.addEventListener('click', sortTasks);
-
+    // function sortTasks(arguments) {
+    //     if (taskContainer.className == prio1)
+    //     taskContainer.style = 'order: 1';
+    // }
     
 
 
@@ -96,13 +102,15 @@ function addToList() {
     textInput.focus();
 
 // task counter
-let counter = todoList.getElementsByTagName('li').length;
+let counter = todoList.getElementsByTagName('div').length;
 divLine.appendChild(taskCounter);
 divLine.appendChild(tasksWord);
 taskCounter.innerHTML = counter;
 tasksWord.innerHTML = ' Tasks';
 }
-// function sortTasks(arguments) {
-
-
-//        }
+    // enter is "send"
+    const enterIsSend = document.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            addToList();
+        }
+    });

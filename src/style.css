@@ -1,3 +1,19 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color:moccasin;
+    height: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+
+
 .done {
     text-decoration: line-through;
-}
+
+/* .prio1 { order: 1;}
+.prio2 { order: 2;}
+.prio3 { order: 3;}
+.prio4 { order: 4;}
+.prio5 { order: 5;} */
+
