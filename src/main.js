@@ -6,19 +6,23 @@ const todoList = document.getElementById('todoList');
 const prioritySelector = document.getElementById('prioritySelector');
 const typeSelector = document.getElementById('typeSelector');
 const divLine = document.getElementById('divLine');
+const sortByPriority = document.createElement('button');
 const taskCounter = document.createElement('span');
 const tasksWord = document.createElement('span');
+// const taskBucket = [];
 taskCounter.id = 'counter';
-
 textInput.focus();
 
 //what happens when the add button is clicked:
 addButton.addEventListener('click', addToList);
 function addToList() {
     // task container
-    let taskContainer = document.createElement('div');
-    taskContainer.className = 'todoContainer';
+    let taskContainer = document.createElement('li');
+    taskContainer.className = prioritySelector.value + ' todoContainer';
+    taskContainer.value = prioritySelector.value;
     todoList.appendChild(taskContainer);
+
+
 
     // task priority
     let taskPriority = document.createElement('span');
@@ -49,16 +53,44 @@ function addToList() {
     addedTask.innerHTML = task;
     taskContainer.appendChild(addedTask);
 
-    // task checkbox...
+    // task checkbox
+    let checkBox = document.createElement('input');
+    checkBox.id = 'isDone';
+    checkBox.type = 'checkbox';
+    taskContainer.appendChild(checkBox);
+    checkBox.addEventListener('change', isDone);
+
+    function isDone() {
+        if (this.checked) {
+            taskContainer.className = 'done';
+        } else {
+            taskContainer.className = prioritySelector.value + ' todoContainer';
+        }
+    }
+
+
+
+    // sort by priority
+    divLine.appendChild(sortByPriority);
+    sortByPriority.id = 'sortButton';
+    sortByPriority.innerHTML = 'Sort';
+    sortButton.addEventListener('click', sortTasks);
+
+    
+
 
 
     textInput.value = '';
     textInput.focus();
 
 // task counter
-let counter = todoList.getElementsByTagName('div').length;
+let counter = todoList.getElementsByTagName('li').length;
 divLine.appendChild(taskCounter);
 divLine.appendChild(tasksWord);
 taskCounter.innerHTML = counter;
 tasksWord.innerHTML = ' Tasks';
 }
+function sortTasks(arguments) {
+
+
+       }
