@@ -19,8 +19,9 @@ function addToList() {
     // task container
     let taskContainer = document.createElement('div');
     // taskContainer.className = prioritySelector.value + ' todoContainer';
-    taskContainer.className = typeSelector.value + ' prio' + prioritySelector.value + ' todoContainer';
+    taskContainer.className = typeSelector.value + ' todoContainer';
     taskContainer.value = prioritySelector.value;
+    taskContainer.title = typeSelector.value;
     todoList.appendChild(taskContainer);
 
 
@@ -84,6 +85,15 @@ function addToList() {
         taskCounter.innerHTML = counter;
     }
 
+    // sort by priority
+    divLine.appendChild(sortByPriority);
+    sortByPriority.id = 'sortButton';
+    sortByPriority.innerHTML = 'Sort';
+    sortButton.addEventListener('click', sortTasks);
+    function sortTasks(arguments) {
+        taskContainer.className = 'prio' + taskContainer.value + ' todoContainer ' + taskContainer.title;
+    }
+
     // task counter
     let counter = todoList.getElementsByTagName('div').length;
     divLine.appendChild(tasksWord);
@@ -93,15 +103,7 @@ function addToList() {
     tasksWord.innerHTML = '<br><br>Tasks: ';
     
 
-// sort by priority
-    // divLine.appendChild(sortByPriority);
-    // sortByPriority.id = 'sortButton';
-    // sortByPriority.innerHTML = 'Sort';
-    // sortButton.addEventListener('click', sortTasks);
-    // function sortTasks(arguments) {
-    //     if (taskContainer.className == prio1)
-    //     taskContainer.style = 'order: 1';
-    // }
+
 
 // end addToList function
 textInput.value = '';
