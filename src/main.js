@@ -19,7 +19,7 @@ function addToList() {
     // task container
     let taskContainer = document.createElement('div');
     // taskContainer.className = prioritySelector.value + ' todoContainer';
-    taskContainer.className = 'prio' + prioritySelector.value + ' todoContainer';
+    taskContainer.className = typeSelector.value + ' prio' + prioritySelector.value + ' todoContainer';
     taskContainer.value = prioritySelector.value;
     todoList.appendChild(taskContainer);
 
@@ -55,17 +55,9 @@ function addToList() {
     addedTask.innerHTML = task;
     taskContainer.appendChild(addedTask);
 
-    // task counter
-let counter = todoList.getElementsByTagName('div').length;
-divLine.appendChild(tasksWord);
-divLine.appendChild(taskCounter);
-
-taskCounter.innerHTML = counter;
-tasksWord.innerHTML = '<br><br>Tasks: ';
-
     // task checkbox
     let checkBox = document.createElement('input');
-    checkBox.id = 'isDone';
+    checkBox.className = 'isDone';
     checkBox.type = 'checkbox';
     taskContainer.appendChild(checkBox);
     checkBox.addEventListener('change', isDone);
@@ -74,7 +66,7 @@ tasksWord.innerHTML = '<br><br>Tasks: ';
         if (this.checked) {
             taskContainer.className = 'done';
         } else {
-            taskContainer.className = prioritySelector.value + ' todoContainer';
+            taskContainer.className = typeSelector.value + ' prio' + prioritySelector.value + ' todoContainer';
         }
     }
 
@@ -91,6 +83,15 @@ tasksWord.innerHTML = '<br><br>Tasks: ';
         counter = todoList.getElementsByTagName('div').length;
         taskCounter.innerHTML = counter;
     }
+
+    // task counter
+    let counter = todoList.getElementsByTagName('div').length;
+    divLine.appendChild(tasksWord);
+    divLine.appendChild(taskCounter);
+    
+    taskCounter.innerHTML = counter;
+    tasksWord.innerHTML = '<br><br>Tasks: ';
+    
 
 // sort by priority
     // divLine.appendChild(sortByPriority);

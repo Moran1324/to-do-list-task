@@ -15,10 +15,40 @@ body {
 .todoContainer {
     background-color: lightcoral;
     display: block;
-    border-radius: 15px;
     padding: 15px;
     margin: 15px;
+    font-family: 'Comic Sans MS';
+    font-size: 20px;
+    font-weight: bold;
 }
+.Do {
+    border-radius: 15px;
+    vertical-align: middle;
+
+}
+.Buy {
+    border-radius: 30px;
+    vertical-align: middle;
+}
+.todoPriority{
+    margin: 7px;
+}
+.todoType{
+    margin: 7px;
+}
+.todoCreatedAt{
+    margin: 7px;
+}
+.todoText{
+    margin: 7px;
+}
+.isDone{
+    height: 2em;
+    width: 2em;
+    margin: 20px;
+}
+
+
 
 
 
@@ -35,6 +65,9 @@ body {
     border-radius: 15px;
     padding: 15px;
     margin: 15px;
+    font-size: 20px;
+    font-family: 'Comic Sans MS';
+}
 /* .prio1 { order: 1;}
 .prio2 { order: 2;}
 .prio3 { order: 3;}
