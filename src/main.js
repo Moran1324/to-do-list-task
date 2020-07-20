@@ -7,9 +7,9 @@ const prioritySelector = document.getElementById('prioritySelector');
 const typeSelector = document.getElementById('typeSelector');
 const divLine = document.getElementById('divLine');
 const sortByPriority = document.createElement('button');
+const deleteChecked = document.createElement('button');
 const taskCounter = document.createElement('span');
 const tasksWord = document.createElement('span');
-// const taskBucket = [];
 taskCounter.id = 'counter';
 textInput.focus();
 
@@ -68,13 +68,25 @@ function addToList() {
         }
     }
 
+    // delete checked
+    deleteChecked.id = 'deleteButton';
+    deleteChecked.innerHTML = 'Clear Checked';
+    divLine.appendChild(deleteChecked);
+    deleteChecked.addEventListener('click', clearChecked);
+    function clearChecked(className){
+    let doneTasks = document.getElementsByClassName('done');
+        for (let i = doneTasks.length - 1; i >= 0; --i) {
+            doneTasks[i].remove();
+        }
+    }
+
 
 
     // sort by priority
-    divLine.appendChild(sortByPriority);
-    sortByPriority.id = 'sortButton';
-    sortByPriority.innerHTML = 'Sort';
-    sortButton.addEventListener('click', sortTasks);
+    // divLine.appendChild(sortByPriority);
+    // sortByPriority.id = 'sortButton';
+    // sortByPriority.innerHTML = 'Sort';
+    // sortButton.addEventListener('click', sortTasks);
 
     
 
@@ -90,7 +102,7 @@ divLine.appendChild(tasksWord);
 taskCounter.innerHTML = counter;
 tasksWord.innerHTML = ' Tasks';
 }
-function sortTasks(arguments) {
+// function sortTasks(arguments) {
 
 
-       }
+//        }
