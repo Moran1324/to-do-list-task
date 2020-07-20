@@ -19,7 +19,6 @@ function addToList() {
     // task container
     let taskContainer = document.createElement('div');
     // taskContainer.className = prioritySelector.value + ' todoContainer';
-    let prioFunc;
     taskContainer.className = 'prio' + prioritySelector.value + ' todoContainer';
     taskContainer.value = prioritySelector.value;
     todoList.appendChild(taskContainer);
@@ -56,6 +55,14 @@ function addToList() {
     addedTask.innerHTML = task;
     taskContainer.appendChild(addedTask);
 
+    // task counter
+let counter = todoList.getElementsByTagName('div').length;
+divLine.appendChild(tasksWord);
+divLine.appendChild(taskCounter);
+
+taskCounter.innerHTML = counter;
+tasksWord.innerHTML = '<br><br>Tasks: ';
+
     // task checkbox
     let checkBox = document.createElement('input');
     checkBox.id = 'isDone';
@@ -81,11 +88,11 @@ function addToList() {
         for (let i = doneTasks.length - 1; i >= 0; --i) {
             doneTasks[i].remove();
         }
+        counter = todoList.getElementsByTagName('div').length;
+        taskCounter.innerHTML = counter;
     }
 
-
-
-    // sort by priority
+// sort by priority
     // divLine.appendChild(sortByPriority);
     // sortByPriority.id = 'sortButton';
     // sortByPriority.innerHTML = 'Sort';
@@ -94,19 +101,11 @@ function addToList() {
     //     if (taskContainer.className == prio1)
     //     taskContainer.style = 'order: 1';
     // }
-    
 
+// end addToList function
+textInput.value = '';
+textInput.focus();
 
-
-    textInput.value = '';
-    textInput.focus();
-
-// task counter
-let counter = todoList.getElementsByTagName('div').length;
-divLine.appendChild(taskCounter);
-divLine.appendChild(tasksWord);
-taskCounter.innerHTML = counter;
-tasksWord.innerHTML = ' Tasks';
 }
     // enter is "send"
     const enterIsSend = document.addEventListener('keypress', function(e) {
