@@ -18,7 +18,6 @@ addButton.addEventListener('click', addToList);
 function addToList() {
     // task container
     let taskContainer = document.createElement('div');
-    // taskContainer.className = prioritySelector.value + ' todoContainer';
     taskContainer.className = typeSelector.value + ' todoContainer';
     taskContainer.value = prioritySelector.value;
     taskContainer.title = typeSelector.value;
@@ -67,7 +66,7 @@ function addToList() {
         if (this.checked) {
             taskContainer.className = 'done';
         } else {
-            taskContainer.className = typeSelector.value + ' prio' + prioritySelector.value + ' todoContainer';
+            taskContainer.className = taskContainer.title + ' prio' + taskContainer.value + ' todoContainer';
         }
     }
 

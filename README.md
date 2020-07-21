@@ -94,6 +94,8 @@ $ npm run test
 - Add a way to search tasks
 - Deploy your app to the internet ! using https://vercel.com/ add a link to your deployed app here (README.md)
 
+-[link to vercel deployment](https://to-do-deployment-pre-pull.vercel.app/)
+
 
 
 ## Grading policy
