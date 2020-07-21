@@ -110,7 +110,7 @@ $ npm run test
 ## Submitting
  - When you are ready to submit run on windows `$env:RECORD_TEST='true'; npm run test`, on mac `RECORD_TEST=true npm run test` (Can take up to 3-4 min) that will create `ui-testing-recording.gif` that will show your app during testing session - push this file as well
  - Add `ui-testing-recording.gif` to the README.md file under this section, if you want you can add another gif if you feel the auto-generated one not beautiful enough
- -  ![alt text](./ui-test-recording-final)
+ -  ![alt text](./ui-test-recording-final.gif)
  - [5 min video](https://drive.google.com/drive/folders/1M782PTn6OD5bIlArBel7FrXZCDO4m6RL?usp=sharing)
 
  - Record a 5 min selfie video, describe yourself in a few words, talk about the project you submit - try to explain how your app works. Think about this video as an interview
