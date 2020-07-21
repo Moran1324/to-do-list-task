@@ -92,6 +92,38 @@ function addToList() {
     sortButton.addEventListener('click', sortTasks);
     function sortTasks(arguments) {
         taskContainer.className = 'prio' + taskContainer.value + ' todoContainer ' + taskContainer.title;
+        // another option to set the style with js
+
+        // // create prio1 order
+        // const allPrio1 = document.getElementsByClassName('prio1');
+        // for (let i=0; i < allPrio1.length; i++) {
+        //     allPrio1[i].style.display = 'flex';
+        //     allPrio1[i].style.order = '1';
+        // }
+        // // create prio2 order
+        // const allPrio2 = document.getElementsByClassName('prio2');
+        // for (let i=0; i < allPrio2.length; i++) {
+        //     allPrio2[i].style.display = 'flex';
+        //     allPrio2[i].style.order = '2';
+        // }
+        // // create prio3 order
+        // const allPrio3 = document.getElementsByClassName('prio3');
+        // for (let i=0; i < allPrio3.length; i++) {
+        //     allPrio3[i].style.display = 'flex';
+        //     allPrio3[i].style.order = '3';
+        // }
+        // // create prio4 order
+        // const allPrio4 = document.getElementsByClassName('prio4');
+        // for (let i=0; i < allPrio4.length; i++) {
+        //     allPrio4[i].style.display = 'flex';
+        //     allPrio4[i].style.order = '4';
+        // }
+        // // create prio5 order
+        // const allPrio5 = document.getElementsByClassName('prio5');
+        // for (let i=0; i < allPrio5.length; i++) {
+        //     allPrio5[i].style.display = 'flex';
+        //     allPrio5[i].style.order = '5';
+        // }
     }
 
     // task counter
