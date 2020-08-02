@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List Task</title>
+    <link rel='stylesheet' href='./style.css'>
+</head>
+<body>
+    <div id='frame'>
+    <h1>My To-do List</h1>
+
+    <div id = 'divLine'>
+      <label for="item">What do I want to do?</label><br><br>
+      <input type="text" name="text" id="textInput" placeholder='Enter your task'>
+      <select id='prioritySelector'>
+          <!-- <option value="" disabled selected hidden >Priority</option> -->
+          <option id='prio1' value='1'>1</option>
+          <option id='prio2' value='2'>2</option>
+          <option id='prio3' value='3'>3</option>
+          <option id='prio4' value='4'>4</option>
+          <option id='prio5' value='5'>5</option>
+      </select>
+      <select id='typeSelector'>
+          <!-- <option value="" disabled selected hidden>Task Type</option> -->
+          <option id='toDo' value='Do'>To Do</option>
+          <option id='toBuy' value='Buy'>To Buy</option>
+      </select>
+      <button id='addButton'>Add</button>
+    
+    </div>
+    <div id='todoList' style='list-style-type:none'></div>
+
+    <script src = './main.js'></script>
+    </div>
+</body>
+</html>

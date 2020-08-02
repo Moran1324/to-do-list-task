@@ -1,0 +1,113 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-image: url('background.jpg'); 
+    background-color: rgb(238, 180, 79);
+    margin: 10px;
+    padding: 10px;
+    
+}
+#frame {
+    background-color: moccasin;
+    display: block;
+    border-radius: 7px;
+    padding: 50px;
+    height: auto;
+    width: 50%;
+    margin: auto;
+    opacity: 95%;
+
+    
+
+}
+h1 {
+display: block;
+background-color: blue;
+color: white;
+-webkit-text-stroke: 1px black;
+padding: 10px;
+margin: 10px;
+border-radius: 5px;
+}
+#divLine {
+    background-color: lightblue;
+    display: block;
+    border-radius: 10px;
+    padding: 10px;
+}
+#sortButton {
+margin-left: 10px;
+}
+.todoContainer {
+    background-color: lightcoral;
+    display: flex;
+    padding: 15px;
+    margin: 15px;
+    font-family: 'Comic Sans MS';
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.Do {
+    border-radius: 15px;
+
+}
+.Buy {
+    border-radius: 30px;
+}
+.todoPriority{
+    margin: 3px 7px 3px auto;
+}
+.todoType{
+    margin: 3px 7px 3px 7px;
+}
+.todoCreatedAt{
+    margin: 3px 7px 3px 7px;
+}
+.todoText{
+    margin: 3px 7px 3px 7px;
+}
+.isDone{
+    height: 2em;
+    width: 2em;
+    margin-left: auto;
+}
+
+
+.done {
+    text-decoration: line-through;
+    background-color: green;
+    display: flex;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px;
+    font-size: 20px;
+    font-family: 'Comic Sans MS';
+    order: 6;;
+}
+
+#todoList {
+    display: flex;
+    flex-direction: column;
+}
+.prio1 { 
+    display: flex;
+    order: 1;
+}
+.prio2 {
+    display: flex;
+    order: 2;
+}
+.prio3 {
+    display: flex;
+    order: 3;
+}
+.prio4 {
+    display: flex;
+    order: 4;
+}
+.prio5 {
+    display: flex;
+    order: 5;
+}
+
